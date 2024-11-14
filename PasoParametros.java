@@ -53,7 +53,7 @@ public class PasoParametros {
     
     public static void duplicarEdad(Persona p) {
         int edadPersona = p.getEdad();
-        p.setEdad(numero * 2);
+        p.setEdad(edadPersona * 2);
     }
     
 }
