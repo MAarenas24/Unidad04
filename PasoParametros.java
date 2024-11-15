@@ -36,6 +36,21 @@ public class PasoParametros {
         duplicarEdad(p);
         System.out.println("Edad persona = " + p.getEdad());
 
+        
+        /**
+         * Vamos a sumar 2 numeros representador por Integer
+         */
+        Integer num3 = 6;
+        Integer num4 = 2;
+        
+        System.out.println("num3: " + num3);
+        System.out.println("num4: " + num4);
+        
+        valorSuma = sumaObjetos(num3, num4);
+        System.out.println("La suma = " + valorSuma);
+        
+        System.out.println("num3: " + num3);
+        System.out.println("num4: " + num4);
     }
     
     /**
@@ -50,10 +65,24 @@ public class PasoParametros {
         b -= numero;
         return a + b;
     }
-    
+
+    /**
+     * se pasa un ibjetode tipo persona como parametro. realmente se pasa la 
+     * referencia del objeto
+     * 
+     * @param p Objeto 
+     */
     public static void duplicarEdad(Persona p) {
         int edadPersona = p.getEdad();
         p.setEdad(edadPersona * 2);
     }
+    
+        
+    public static int sumaObjetos(Integer a, Integer b) {
+        a *= b;
+        b -= numero;
+        return a + b;
+    }
+    
     
 }
