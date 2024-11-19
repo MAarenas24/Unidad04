@@ -36,4 +36,28 @@ public class Moto extends Vehiculo {
             consumirCombustible(combustibleConsumido);
         }
     }
+    
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null) {
+            return false;
+        }
+        if (getClass().getName().equals(o.getClass().getName())) {
+            return false;
+        }
+        Moto moto = (Moto) o;
+        
+        if (this.marca.equals(moto.marca)) {
+            return false;
+        }
+        
+        if (this.modelo.equals(moto.modelo)) {
+            return false;
+        }
+        
+        return true;
+    }
 }

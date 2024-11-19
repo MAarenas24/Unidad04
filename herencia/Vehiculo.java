@@ -4,7 +4,7 @@ package unidad04.herencia;
  *
  * @author Miguel Angel Arenas
  */
-public abstract class Vehiculo {
+public abstract class Vehiculo /*implements interfaz1, interfaz2*/ {
     protected String marca;
     protected String modelo;
     private int numeroRuedas;
