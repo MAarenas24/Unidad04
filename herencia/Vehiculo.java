@@ -10,6 +10,7 @@ public abstract class Vehiculo {
     private int numeroRuedas;
     private double combustible;
     private long kmRecorridos;
+    private String color;
     
     public Vehiculo(String marca, 
             String modelo, 
