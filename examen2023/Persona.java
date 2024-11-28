@@ -6,7 +6,7 @@ package unidad04.examen2023;
  * @author Miguel Angel Arenas
  */
 
-public class Persona {
+public abstract class Persona {
     private String nombre;
     private int edad;
     
@@ -35,6 +35,17 @@ public class Persona {
             edad = 0;
         }
         this.edad = edad;
+    }
+    
+    /**
+     * Comprueba q en una cadena de valores determinado se encuentra el valor 
+     * introducido como nuevo
+     * @param valoresValidos cadena de valores delimitadors
+     * @param nuevo el valor a comprobar
+     * @return 
+     */
+    public static boolean valorValido(String valoresValidos, String nuevo) {
+        return valoresValidos.contains("#" + nuevo.toLowerCase() + "#");
     }
     
     @Override

@@ -28,20 +28,16 @@ public class Profesorado extends Persona {
         }
         */
         
-        if (idiomaValido(nuevo)) {
+        if (valorValido(getIdiomasValidos(), nuevo)) {
             idioma = nuevo;
         } else {
             idioma = "No asignado";
         }
     }
     
-    public static boolean idiomaValido(String nuevo) {
-        String todosIdiomas = "#" + INGLES + "#" + FRANCES + "#" + ALEMAN + "#";
-        
-        return todosIdiomas.contains("#" + nuevo.toLowerCase() + "#");
-            
-        
-    }
+    public static String getIdiomasValidos() {
+        return "#" + INGLES + "#" + FRANCES + "#" + ALEMAN + "#";
+    } 
     
     public Profesorado clone() {
         return new Profesorado(getNombre(), getEdad(), idioma);

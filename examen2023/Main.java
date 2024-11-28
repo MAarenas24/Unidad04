@@ -15,6 +15,13 @@ public class Main {
         System.out.println(pro1.toString());
         
         System.out.println(pro2.toString());
+        
+//        Alumnado a1 = new Alumnado("Alumnado", 25, "inglés", "C2");
+//        System.out.println(a1.pagoMensual());
+        Presencial pres = new Presencial("Presencial", 25, "inglés", "C2", 10);
+        
+        
+        System.out.println(pres.pagoMensual());
     }
     
 }
