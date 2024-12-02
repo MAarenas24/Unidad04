@@ -6,13 +6,12 @@ package unidad04.htmlElements;
  */
 public class Parrafo extends ElementoHTML {
     
-    public Parrafo(String content) {
-        super("p", content);
+    public Parrafo(String id, String content) {
+        super("p", id, contenidoNotNull(content));
     }
     
-    @Override
-    public String toString() {
-        return "<p>" + content + "</p>";
+    public Parrafo(String content) {
+        this(null, content);
     }
     
 }
