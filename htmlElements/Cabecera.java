@@ -1,4 +1,4 @@
-package Unidad04.htmlElements;
+package unidad04.htmlElements;
 
 /**
  *
@@ -9,8 +9,8 @@ public class Cabecera extends ElementoHTML {
     public Cabecera(String id,
             String contenido,
             int nivel) {
-        super("h", id, contenido);
-//        getNivelValido(nivel);
+        super("h" + nivel, id, contenido);
+        getNivelValido(nivel);
     }
     
     public Cabecera(String contenido,
@@ -22,8 +22,7 @@ public class Cabecera extends ElementoHTML {
         this(null, contenido, 1);
     }
     
-//    private int getNivelValido(nivel int) {
-//        return 0;
-//    }
-    
+    private int getNivelValido(int nivel) {
+        return nivel;
+    }
 }
