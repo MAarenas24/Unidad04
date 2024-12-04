@@ -1,4 +1,4 @@
-package Unidad04.htmlElements;
+package unidad04.htmlElements;
 
 /**
  * Crea 
@@ -16,14 +16,14 @@ public abstract class ElementoHTML {
     /**
      * El contenido que quieras meterle a la etiqueta
      */
-    protected String content;
+    protected String contenido;
     
     public ElementoHTML(String tag,
             String id,
             String content) {
         this.tag = tag;
         this.id = id;
-        this.content = content;
+        this.contenido = content;
     }
     
     public ElementoHTML(String tag,
@@ -74,7 +74,7 @@ public abstract class ElementoHTML {
      * @param contenido el nuevo id que se va a poner
      */
     public void setContenido(String contenido) {
-        content = contenido;
+        this.contenido = contenido;
     }
     
     /**
@@ -84,11 +84,11 @@ public abstract class ElementoHTML {
     @Override
     public String toString() {
         String toString = "";
-        if (content != null && id != null) {
-            toString = "<" + tag + " id = \"" + id + "\">" + content + "</" + tag + ">";
-        } else if (content != null && id == null){
-            toString = "<" + tag + ">" + content + "</" + tag + ">";
-        } else if (content == null && id != null) {
+        if (contenido != null && id != null) {
+            toString = "<" + tag + " id = \"" + id + "\">" + contenido + "</" + tag + ">";
+        } else if (contenido != null && id == null){
+            toString = "<" + tag + ">" + contenido + "</" + tag + ">";
+        } else if (contenido == null && id != null) {
             toString = "<" + tag + " id = \"" + id + "\"/>";
         } else {
             toString = "<" + tag + "/>";

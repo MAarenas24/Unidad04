@@ -1,10 +1,11 @@
-package Unidad04.htmlElements;
+package unidad04.htmlElements;
 
 /**
  *
  * @author Miguel Angel Arenas
  */
 public class Enlace extends ElementoHTML {
+
     /**
      * La direccion del enlace
      */
@@ -24,6 +25,7 @@ public class Enlace extends ElementoHTML {
 
     /**
      * Comprueba q el contenido no sea null
+     *
      * @param nuevoContenido el contenido que va a evaluar
      * @param valueIfNull el contenido que va a ser si el contenido es null
      * @return devulve el contenido
@@ -38,6 +40,7 @@ public class Enlace extends ElementoHTML {
 
     /**
      * modifica el url y comprueba q tenga si no tiene se pone un #
+     *
      * @param url el url nuevo
      */
     public void setHref(String url) {
@@ -51,18 +54,11 @@ public class Enlace extends ElementoHTML {
     @Override
     public String toString() {
         String enlace = "";
-        if (content != null || content.equals("")) {
-            if (id == null || id.equals("")) {
-                enlace = "<a href = \"" + href + "\" >" + "link" + "</a>";
-            } else {
-                enlace = "<a id = \"" + id + "\" href = \"" + href + "\">link</a>";
-            }
+
+        if (id == null || id.equals("")) {
+            enlace = "<a href = \"" + href + "\" >" + "link" + "</a>";
         } else {
-            if (id == null || id.equals("")) {
-                enlace = "<a href = \"" + href + "\" >" + content + "</a>";
-            } else {
-                enlace = "<a id = \"" + id + "\" href = \"" + href + "\">" + content + "</a>";
-            }
+            enlace = "<a id = \"" + id + "\" href = \"" + href + "\">link</a>";
         }
 
         return enlace;

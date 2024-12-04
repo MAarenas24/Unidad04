@@ -1,4 +1,4 @@
-package Unidad04.htmlElements;
+package unidad04.htmlElements;
 
 /**
  *
@@ -35,5 +35,32 @@ public class Main {
         Imagen i = new Imagen("i1", "aajsdoajdioasj");
 
         System.out.println(i);
+        
+        System.out.println("-----------------------");
+        ElementoLista el = new ElementoLista("contenido");
+        System.out.println("ElementoLista: " + el);
+        System.out.println("-----------------------");
+        Head h = new Head();
+        System.out.println("Head: " + h);
+        System.out.println("-----------------------");
+        Title t = new Title("Titulo");
+        System.out.println("Title: " + t);
+        System.out.println("-----------------------");
+        Body b = new Body();
+        System.out.println("Body: " + b);
+        
+        System.out.println("----------------------------");
+        System.out.println("----------------------------");
+        
+        Lista l = new Lista(true);
+        
+        System.out.println(l);
+        
+        ElementoLista el1 = new ElementoLista("contenido1");
+        ElementoLista el2 = new ElementoLista("contenido2");
+        
+        l.addElementos(el, el1, el2);
+        
+        System.out.println(l);
     }
 }
