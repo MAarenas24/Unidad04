@@ -1,7 +1,7 @@
-package unidad04.htmlElements;
+package Unidad04.htmlElements;
 
 /**
- *
+ * Crea un elemento HTML de parrafo
  * @author Miguel Angel Arenas
  */
 public class Parrafo extends ElementoHTML {

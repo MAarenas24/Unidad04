@@ -1,11 +1,13 @@
-package unidad04.htmlElements;
+package Unidad04.htmlElements;
 
 /**
  *
  * @author Miguel Angel Arenas
  */
 public class Enlace extends ElementoHTML {
-
+    /**
+     * La direccion del enlace
+     */
     private String href;
 
     public Enlace(String id,
@@ -19,7 +21,13 @@ public class Enlace extends ElementoHTML {
             String href) {
         this(null, contenido, href);
     }
-    
+
+    /**
+     * Comprueba q el contenido no sea null
+     * @param nuevoContenido el contenido que va a evaluar
+     * @param valueIfNull el contenido que va a ser si el contenido es null
+     * @return devulve el contenido
+     */
     protected static String contenidoNotNull(String nuevoContenido, String valueIfNull) {
         if (nuevoContenido != null || nuevoContenido.equals("")) {
             return nuevoContenido;
@@ -28,6 +36,10 @@ public class Enlace extends ElementoHTML {
         }
     }
 
+    /**
+     * modifica el url y comprueba q tenga si no tiene se pone un #
+     * @param url el url nuevo
+     */
     public void setHref(String url) {
         if (url == null || url.equals("")) {
             href = "#";
@@ -39,11 +51,20 @@ public class Enlace extends ElementoHTML {
     @Override
     public String toString() {
         String enlace = "";
-        if (id == null || id.equals("")) {
-            enlace = "<a href = \"" + href + "\" >" + content + "</a>";
+        if (content != null || content.equals("")) {
+            if (id == null || id.equals("")) {
+                enlace = "<a href = \"" + href + "\" >" + "link" + "</a>";
+            } else {
+                enlace = "<a id = \"" + id + "\" href = \"" + href + "\">link</a>";
+            }
         } else {
-            enlace = "<a id = \"" + id + "\" href = \"" + href + "\">" + content + "</a>";
+            if (id == null || id.equals("")) {
+                enlace = "<a href = \"" + href + "\" >" + content + "</a>";
+            } else {
+                enlace = "<a id = \"" + id + "\" href = \"" + href + "\">" + content + "</a>";
+            }
         }
+
         return enlace;
     }
 }
