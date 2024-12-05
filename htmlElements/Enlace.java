@@ -1,4 +1,4 @@
-package unidad04.htmlElements;
+package Unidad04.htmlElements;
 
 /**
  *
@@ -51,6 +51,10 @@ public class Enlace extends ElementoHTML {
         }
     }
 
+    /**
+     * muestra el enlace
+     * @return devuelve el enlace
+     */
     @Override
     public String toString() {
         String enlace = "";

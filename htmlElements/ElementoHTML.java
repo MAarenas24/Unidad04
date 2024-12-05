@@ -1,4 +1,4 @@
-package unidad04.htmlElements;
+package Unidad04.htmlElements;
 
 /**
  * Crea 
@@ -23,7 +23,7 @@ public abstract class ElementoHTML {
             String content) {
         this.tag = tag;
         this.id = id;
-        this.contenido = content;
+        this.contenido = contenidoNotNull(content);
     }
     
     public ElementoHTML(String tag,
@@ -79,19 +79,19 @@ public abstract class ElementoHTML {
     
     /**
      * muestra el elementoHTML
-     * @return 
+     * @return devuelve el elementoHTML
      */
     @Override
     public String toString() {
         String toString = "";
         if (contenido != null && id != null) {
-            toString = "<" + tag + " id = \"" + id + "\">" + contenido + "</" + tag + ">";
+            toString = "\n<" + tag + " id = \"" + id + "\">" + contenido + "</" + tag + ">\n";
         } else if (contenido != null && id == null){
-            toString = "<" + tag + ">" + contenido + "</" + tag + ">";
+            toString = "\n<" + tag + ">" + contenido + "</" + tag + ">\n";
         } else if (contenido == null && id != null) {
-            toString = "<" + tag + " id = \"" + id + "\"/>";
+            toString = "\n<" + tag + " id = \"" + id + "\"/>\n";
         } else {
-            toString = "<" + tag + "/>";
+            toString = "\n<" + tag + "/>\n";
         }
         return toString;
     }

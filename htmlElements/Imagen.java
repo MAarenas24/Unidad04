@@ -1,4 +1,4 @@
-package unidad04.htmlElements;
+package Unidad04.htmlElements;
 
 /**
  *
@@ -22,6 +22,10 @@ public class Imagen extends ElementoHTML {
         this.src = src;
     }
     
+    /**
+     * Muestra la imagen
+     * @return devuelve la imagen
+     */
     @Override
     public String toString() {
         String enlace = "";

@@ -1,4 +1,4 @@
-package unidad04.htmlElements;
+package Unidad04.htmlElements;
 
 /**
  *
@@ -33,17 +33,11 @@ public class Lista extends ElementoHTML implements AddElementosHTML {
             return "ol";
         }
     }
-
-    public void addElemento(ElementoLista elemento) {
-        super.tag += elemento;
-    }
-
-    public void addElementos(ElementoLista... elementos) {
-        for (ElementoLista elemento : elementos) {
-            super.tag += elemento;
-        }
-    }
-
+    
+    /**
+     * Añade contenido solamente si el contenido es de tipo ElementoLista
+     * @param elemento elemento que se va a añadir
+     */
     @Override
     public void addElemento(ElementoHTML elemento) {
         if (elemento instanceof ElementoLista) {
@@ -51,6 +45,10 @@ public class Lista extends ElementoHTML implements AddElementosHTML {
         }
     }
 
+    /**
+     * Añade contenido solamente si el contenido es de tipo ElementoLista
+     * @param elementos elemento que se va a añadir 
+     */
     @Override
     public void addElementos(ElementoHTML... elementos) {
         for (ElementoHTML elemento : elementos) {

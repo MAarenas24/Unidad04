@@ -1,4 +1,4 @@
-package unidad04.htmlElements;
+package Unidad04.htmlElements;
 
 /**
  *
@@ -10,14 +10,28 @@ public class Head extends ElementoHTML implements AddElementosHTML {
         super("head", null, "");
     }
 
+    /**
+     * Añade contenido solamente si el contenido es de tipo Title
+     * @param elemento elemento que se va a añadir
+     */
     @Override
     public void addElemento(ElementoHTML elemento) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        if (elemento instanceof Title) {
+            contenido += elemento;
+        }
     }
 
+    /**
+     * Añade contenido solamente si el contenido es de tipo Title
+     * @param elementos elemento que se va a añadir
+     */
     @Override
     public void addElementos(ElementoHTML... elementos) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        for (ElementoHTML elemento : elementos) {
+            if (elemento instanceof Title) {
+                contenido += elemento;
+            }
+        }
     }
     
 }
